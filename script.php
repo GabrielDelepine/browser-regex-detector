@@ -20,7 +20,7 @@
     
     $bname = 'Unknown';
     $platform = 'Unknown';
-    $version= $ub ="";
+    $version= $ub = "";
 
     //First get the platform?
     if (preg_match('/linux/i', $u_agent)) {
@@ -36,10 +36,24 @@
     // Next get the name of the useragent yes seperately and for good reason
     if(preg_match('/Trident/i', $u_agent) && !preg_match('/Opera/i',$u_agent))
     {
-        $bname = 'Internet Explorer';
         if(preg_match('/MSIE/i', $u_agent))
-            $ub = "MSIE";
-        // else no $ub because we use another pattern
+        {
+            if(preg_match('/chromeframe/i', $u_agent))
+            {
+                $bname = 'IE with Chrome Frame';
+                $ub = "chromeframe";
+            }
+            else
+            {
+                $bname = 'Internet Explorer';
+                $ub = "MSIE";
+            }
+        }
+        else
+        {
+            $bname = 'Internet Explorer';
+            // no $ub because we use another pattern
+        }
     }
     elseif(preg_match('/Firefox/i',$u_agent))
     {
