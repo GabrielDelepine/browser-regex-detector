@@ -5,7 +5,13 @@ A PHP script who analyse the user agent and define the browser name, the browser
 
 Why should I use this script ?
 ======================
-To save execution time (the script takes less than 1ms) ! It's faster to make a regex on a string than use a "database" like the file browscap.ini
+To save execution time (the script takes less than 1ms) ! It's faster to make a regex on a string than use a "database" like the browscap.ini file.
+
+
+Demo
+======================
+You can try the script in <a href="http://yappli.github.io/browser-regex-detector/">the demo page</a>.
+If you find a user agent who is not correctly detected please open an issue.
 
 
 Limit of the concept
