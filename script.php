@@ -1,22 +1,14 @@
 <?php
+/* Version 0.1 */
     error_reporting(E_ALL ^ E_NOTICE);
     ini_set('display_errors', TRUE);
     
     $start = microtime(true);
     
-    $u_agent = isset($_SERVER['HTTP_USER_AGENT'])?$_SERVER['HTTP_USER_AGENT']:'';
-    
-    // For test
-    $u_agent = "Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko"; // IE 11
-    $u_agent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"; // IE 10
-    //~ $u_agent = "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"; // IE 9
-    //~ $u_agent = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0)"; // IE 8
-    //~ $u_agent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)"; // IE 7
-    //~ $u_agent = "Mozilla/5.0 (Windows NT 6.1; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1"; // FF7 windows
-    //~ $u_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1"; // FF 7 Mac
-    //~ $u_agent = "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25"; // iPad IOS6
-    //~ $u_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/30.0.1599.114 Chrome/30.0.1599.114 Safari/537.36**30.0.1599.114"; // Chromium 30 Linux
-    
+    if(isset($_POST['u_agent']))
+        $u_agent = $_POST['u_agent']; // For test purpose only ! Delete-it for production
+    else
+        $u_agent = isset($_SERVER['HTTP_USER_AGENT'])?$_SERVER['HTTP_USER_AGENT']:'';   
     
     $bname = 'Unknown';
     $platform = 'Unknown';
