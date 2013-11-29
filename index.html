@@ -13,6 +13,13 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <script type="text/javascript">
+    function setUserAgent(u_agent)
+    {
+        console.log(u_agent);
+        document.getElementById('u_agent').value = u_agent;
+    }
+    </script>
   </head>
   <body>
 
@@ -25,7 +32,7 @@
         <span id="logo"></span>
 
         <a href="https://github.com/Yappli/browser-regex-detector" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
+        <div class="downloads" style="display: none;">
           <span>Downloads:</span>
           <ul>
             <li><a href="https://github.com/Yappli/browser-regex-detector/zipball/master" class="button">ZIP</a></li>
@@ -40,11 +47,31 @@
       </nav>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Demo page for Browser-regex-detector.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>
+    <label for="u_agent_select">Choose a browser : </label>
+    <select id="u_agent_select" onchange="setUserAgent(this.options[this.selectedIndex].value)">
+        <option selected="selected"></option>
+        <option value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko">IE11</option>
+        <option value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">IE 10</option>
+        <option value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)">IE 9</option>
+        <option value="Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0)">IE 8</option>
+        <option value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)">IE 7</option>
+        <option value="Mozilla/5.0 (Windows NT 6.1; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1">FF 7 - windows</option>
+        <option value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1">FF 7 - mac</option>
+        <option value="Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25">iPad - IOS6</option>
+        <option value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/30.0.1599.114 Chrome/30.0.1599.114 Safari/537.36**30.0.1599.114">Chomium 30 - linux</option>
+    </select>
+    <form action="http://cdn.yappli.com/demo/browser-regex-detector/script.0.1.php" method="post">
+        <label for="u_agent">Or write a user agent by yourself : </label>
+        <input type="text" name="u_agent" id="u_agent" style="width: 100%; display: block;"/>
+        <br/>
+        <input type="submit" value="Let's see the result !"/>
+    </form>
+</p>
 
-<pre><code>$ cd your_repo_root/repo_name
+<pre style="display: none;"><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
 </code></pre>
