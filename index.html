@@ -46,9 +46,6 @@
         <ul></ul>
       </nav>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Demo page for Browser-regex-detector.</h3>
-
 <p>
     <label for="u_agent_select">Choose a browser : </label>
     <select id="u_agent_select" onchange="setUserAgent(this.options[this.selectedIndex].value)">
@@ -100,12 +97,17 @@
         <option value="Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25">iPad - IOS6</option>
         <option value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/30.0.1599.114 Chrome/30.0.1599.114 Safari/537.36**30.0.1599.114">Chomium 30 - linux</option>
     </select>
-    <form action="http://cdn.yappli.com/demo/browser-regex-detector/script.0.1.php" method="post">
-        <label for="u_agent">Or write a user agent by yourself (<a href="http://www.useragentstring.com/pages/useragentstring.php" target="_blank">you can find examples here</a>) : </label>
-        <input type="text" name="u_agent" id="u_agent" style="width: 100%; display: block;"/>
+    <form action="http://cdn.yappli.com/demo/browser-regex-detector/script.0.1.php" method="post" style="margin-left: 120px;">
+        <input type="text" name="u_agent" id="u_agent" style="width: 100%; display: block;" placeholder="You also can write a user agent here by yourself"/>
         <br/>
         <input type="submit" value="Let's see the result !"/>
     </form>
+</p>
+
+<h3><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Resource</h3>
+<p>
+    - <a href="http://www.useragentstring.com/pages/useragentstring.php" target="_blank">Enormous list of user agent</a><br/>
+    - <a href="http://cdn.yappli.com/info/user_agent.php" target="_blank">What's my user agent ?</a>
 </p>
 
 <h3><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Issue</h3>
