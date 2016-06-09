@@ -10,7 +10,7 @@ To save execution time (the script takes less than 1ms) ! It's faster to make a 
 
 Demo
 ======================
-You can try the script in <a href="http://yappli.github.io/browser-regex-detector/">the demo page</a>.
+You can try the script in <a href="http://gabrieldelepine.github.io/browser-regex-detector/">the demo page</a>.
 If you find a user agent who is not correctly detected please open an issue.
 
 
